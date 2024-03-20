@@ -35,7 +35,7 @@ internal class Banda : IAvaliavel
 
     public void AdicionarResumo()
     {
-        var client = new OpenAIAPI("<API>");
+        var client = new OpenAIAPI(/*Adicionar aa API-Key aqui*/);
         var chat = client.Chat.CreateConversation();
         chat.AppendSystemMessage($"Resuma a banda {Nome} em 1 parágrafo.");
         var resposta = chat.GetResponseFromChatbotAsync().GetAwaiter().GetResult();
